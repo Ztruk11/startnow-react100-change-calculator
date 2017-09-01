@@ -3,25 +3,18 @@ const path = require('path');
 const Nightmare = require('nightmare');
 const expect = require('chai').expect;
 const axios = require('axios');
-
 let nightmare;
-
 const app = express();
 app.use(express.static(path.join(__dirname, '/../public')));
 app.use(express.static(path.join(__dirname, '/../dist')));
-
 app.listen(8888);
-
 const url = 'http://localhost:8888';
-
 describe('express', function() {
-  this.timeout(6500);
+  this.timeout(17000);
   beforeEach(() => {
     nightmare = new Nightmare();
   });
-
   it('should load successfully', () => axios.get(url).then(r => expect(r.status === 200)));
-
   it('should include an input element for the user to enter amount due', () =>
     nightmare
     .goto(url)
@@ -32,7 +25,6 @@ describe('express', function() {
       expect(typeof input).to.equal('object');
     })
   );
-
   it('should include an input element for the user to enter amount received', () =>
     nightmare
     .goto(url)
@@ -43,7 +35,6 @@ describe('express', function() {
       expect(typeof input).to.equal('object');
     })
   );
-
   it('should include a button for the user to calculate change', () =>
     nightmare
     .goto(url)
@@ -54,7 +45,6 @@ describe('express', function() {
       expect(typeof button).to.equal('object');
     })
   );
-
   it('should calculate total change correctly', () =>
     nightmare
     .goto(url)
@@ -66,7 +56,6 @@ describe('express', function() {
     .end()
     .then(el => expect(el).to.equal('The total change due is $6.99'))
   );
-
   it('should calculate individual change correctly', () =>
     nightmare
     .goto(url)
@@ -86,11 +75,9 @@ describe('express', function() {
         nickels: '0',
         pennies: '4'
       };
-
       const promises = Object
         .keys(expected)
         .map((key, i) => expect(results[i]).to.equal(expected[key], `Expected ${expected[key]} ${key}, saw ${results[i]} instead.`));
-
       return Promise.all(promises);
     })
   );

@@ -135,36 +135,36 @@ class App extends Component {
 
                 <div className="col-md-3 well well-lg">
                   <h1 className="text-center">Twenties</h1>
-                  <p className="lead">{this.state.twenties}</p>
+                  <p>{this.state.twenties}</p>
                 </div>
                 <div className="col-md-3 well well-lg">
                   <h1 className="text-center">Tens</h1>
-                  <p className="lead">{this.state.tens}</p>
+                  <p>{this.state.tens}</p>
                 </div>
                 <div className="col-md-3 well well-lg">
                   <h1 className="text-center">Fives</h1>
-                  <p className="lead">{this.state.fives}</p>
+                  <p>{this.state.fives}</p>
                 </div>
                 <div className="col-md-3 well well-lg">
                   <h1 className="text-center">Ones</h1>
-                  <p className="lead">{this.state.ones}</p>
+                  <p>{this.state.ones}</p>
                 </div>
 
                 <div className="col-md-3 well well-lg">
                   <h1 className="text-center">Quarters</h1>
-                  <p className="lead">{this.state.quarters}</p>
+                  <p>{this.state.quarters}</p>
                 </div>
                 <div className="col-md-3 well well-lg">
                   <h1 className="text-center">Dimes</h1>
-                  <p className="lead">{this.state.dimes}</p>
+                  <p>{this.state.dimes}</p>
                 </div>
                 <div className="col-md-3 well well-lg">
                   <h1 className="text-center">Nickels</h1>
-                  <p className="lead">{this.state.nickels}</p>
+                  <p>{this.state.nickels}</p>
                 </div>
                 <div className="col-md-3 well well-lg">
                   <h1 className="text-center">Pennies</h1>
-                  <p className="lead">{this.state.pennies}</p>
+                  <p>{this.state.pennies}</p>
                 </div>
 
               </div>
